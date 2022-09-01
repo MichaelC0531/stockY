@@ -1,0 +1,21 @@
+body {
+  /* padding: 50px; */
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+nav-item {
+  color: white;
+}
+nav {
+  background-color: green;
+  font-size: 30px;
+  display: flex;
+  justify-content: space-evenly;
+
+}
+#home {
+  display: flex;
+  justify-content: center;
+  color: blue;
+  font-size: 50px;
+}

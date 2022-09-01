@@ -1,0 +1,21 @@
+<%- include('../partials/header') %>
+
+<div>Brand: <%= sneaker.brand%></div>
+<div>Model: <%= sneaker.model%></div>
+<div>Size: <%= sneaker.size%></div>
+<div id="bidAtProduct">Bid: <%= sneaker.bid%></div>
+<div id="askAtProduct">Ask: <%= sneaker.ask%></div>
+
+<form action="/sneakers/<%= sneaker.id %>?_method=PUT" method="POST" autocomplete="off">
+    <!-- <label>NAME:</label>
+    <input type="text" name="guestname"> -->
+    <label>PRICE:</label>
+    <input type="text" name="price">
+    <label>Bid
+        <input type="radio" value="bid" name="update">
+    </label>
+    <label>Sell
+        <input type="radio" value="ask" name="update">
+    </label>
+    <input type="submit" value="Enter">
+</form>

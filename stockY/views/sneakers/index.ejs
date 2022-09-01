@@ -1,0 +1,24 @@
+<%- include('../partials/header') %>
+
+<table>
+    <tr>
+        <th>Brand</th>
+        <th>Model</th>
+        <th>Size</th>
+        <th>Bidding</th>
+        <th>Asking</th>
+    </tr>
+    <tbody>
+        <% sneakers.forEach(function (s) { %>
+            <tr>
+                <td><%= s.brand %></td>
+                <td><%= s.model %></td>
+                <td><%= s.size %></td>
+                <td><%= s.bid %></td>
+                <td><%= s.ask %></td>
+                <td><a href="/sneakers/<%=s.id%>">Detail</a></td>
+            </tr>
+        <% }) %>
+    </tbody>
+</table>
+
