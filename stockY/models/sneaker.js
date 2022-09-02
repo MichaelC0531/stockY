@@ -3,6 +3,7 @@ const Schema = mongoose.Schema;
 
 const userSchema = new Schema ({
     username: String
+    
 })
 const sneakerSchema = new Schema ({
     brand: {type: String, required: true, lowercase: true},
