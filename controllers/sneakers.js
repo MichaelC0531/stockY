@@ -10,7 +10,7 @@ module.exports = {
 
 function index(req, res) {
     Sneaker.find({}, function(err, sneakers) {
-        res.render('sneakers/index', {sneakers})
+        res.render('sneakers/index', {sneakers, user: req.user})
     })
 }
 function show(req, res) {
