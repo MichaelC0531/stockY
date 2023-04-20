@@ -8,11 +8,11 @@ var session = require('express-session')
 var passport = require('passport')
 
 require('dotenv').config();
+require('./config/database');
+require('./config/passport');
 
 var app = express();
 
-require('./config/database');
-require('./config/passport');
 
 var indexRouter = require('./routes/index');
 var sneakersRouter = require('./routes/sneakers');
@@ -23,7 +23,7 @@ app.set('view engine', 'ejs');
 
 app.use(logger('dev'));
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride('_method'));
@@ -37,6 +37,7 @@ app.use(passport.session())
 
 app.use('/', indexRouter);
 app.use('/sneakers', sneakersRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

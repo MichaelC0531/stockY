@@ -1,13 +1,9 @@
 body {
-  /* padding: 50px; */
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-nav-item {
-  color: white;
-}
 nav {
-  background-color: green;
+  background-color: lightgrey;
   font-size: 30px;
   display: flex;
   justify-content: space-evenly;

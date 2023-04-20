@@ -1,4 +1,4 @@
-const Sneaker = require('../models/sneaker')
+const Sneaker = require('../models/sneaker').Sneaker
 
 module.exports = {
     index,
